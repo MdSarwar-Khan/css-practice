@@ -7,12 +7,16 @@ I'm using this space to practice what I learn and keep track of my progress as I
 ## Projects
 
 ### 01 — Parallax Website
+### 02 — Job Form
+### 03 — Web Page
 
 A simple parallax website built using HTML and CSS.
 
 ## Progress
 
 * [x] Parallax Website
+* [x] Job Form
+* [x] Web Page
 * [ ] Next Project
 * [ ] More projects coming soon
 
