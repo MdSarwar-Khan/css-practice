@@ -9,6 +9,7 @@ I'm using this space to practice what I learn and keep track of my progress as I
 ### 01 — Parallax Website
 ### 02 — Job Form
 ### 03 — Web Page
+### 03 — Restaurant Landing Page
 
 A simple parallax website built using HTML and CSS.
 
@@ -17,6 +18,7 @@ A simple parallax website built using HTML and CSS.
 * [x] Parallax Website
 * [x] Job Form
 * [x] Web Page
+* [x] Restaurant Landing Page
 * [ ] Next Project
 * [ ] More projects coming soon
 
