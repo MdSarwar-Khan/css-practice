@@ -1,155 +1,405 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
-html, body {
-    line-height: 1.4;
-    font-weight: 300;
-    font-family: "Roboto", sans-serif;
-    background-color: rgb(231, 238, 239);
+
+html {
+    scroll-behavior: smooth;
 }
+
+body {
+    font-family: "Roboto", sans-serif;
+    line-height: 1.5;
+    font-weight: 300;
+    background-color: #F7EFE3;
+    color: #2A1A16;
+}
+
+
 .top {
     width: 100%;
     height: 100px;
     position: fixed;
-    background-color: rgb(31, 25, 10);
-}
-.header {
-    width: 201px;
-    height: 76px;
-    margin-left: 117px;
-    margin-top: 10px;
-    position: sticky;
+    top: 0;
+    left: 0;
 
-}
+    background-color: #3B1712;
 
-.intro {
-    display: flex;
-}
-.image_content {
-    width: 512px;
-    height: 514px;
-    margin-top: 132px;
-    margin-left: 50px;
-    margin-right: 50px;
-
-}
-.text_container {
-    width: 562px;
-    height: 377px;
-    margin-top: 201px;
-    margin-left: 50px;
-    text-align:left;
-
-}
-h1 {
-    line-height: 1.4;
-    font-weight: 300;
-    font-size: 70px;
-    margin-bottom: 10px;
-}
-.text_container tag{
-    background-color: #149f39;
-    align-self: flex-start;
-    padding: 5px 10px;
-    color: white;
-}
-
-button {
-    margin-top: 40px;
-    background-color: #ffc066;
-    padding: 10px 15px;
-    transition: 0.2s ease-in-out;
-    box-sizing: border-box;
-}
-
-.services {
     display: flex;
     align-items: center;
-    margin-top: 78px;
+
+    z-index: 1000;
 }
-.voucher ,.food ,.delivery {
+
+.header {
+    width: 200px;
+    height: auto;
+    margin-left: 8%;
+}
+
+
+.intro {
+    min-height: 650px;
+
     display: flex;
-    text-align: auto;
+    align-items: center;
+    justify-content: center;
+
+    gap: 60px;
+
+    padding: 140px 8% 60px;
+}
+
+.image_content {
+    width: 45%;
+    max-width: 512px;
+    height: auto;
+}
+
+.text_container {
+    width: 45%;
+    max-width: 562px;
+}
+
+h1 {
+    font-size: clamp(40px, 6vw, 70px);
+    line-height: 1.1;
+    font-weight: 400;
+
+    margin-bottom: 20px;
+}
+
+.text_container .tag {
+    display: inline-block;
+
+    background-color: #356859;
+    color: white;
+
+    padding: 6px 12px;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    border-radius: 4px;
+}
+
+
+button {
+    margin-top: 35px;
+
+    padding: 12px 22px;
+
+    background-color: #D96B27;
+    color: white;
+
+    border: none;
+    border-radius: 4px;
+
+    font-size: 16px;
+    cursor: pointer;
+
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: #B94F20;
+    transform: translateY(-2px);
+}
+
+
+.services {
+    max-width: 1200px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     gap: 20px;
-    padding: 20px;
+
+    margin: 60px auto;
+    padding: 0 8%;
 }
+
+.voucher,
+.food,
+.delivery {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 25px;
+}
+
+.voucher img,
+.food img,
+.delivery img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+
 .divider {
-    border: 1px solid #ccc;
-    margin: 20px 0px;
-}
-/* .menu {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    text-align: center;
-}
-.explore_menu {
-    margin-top: 50px;
-}
-.multi-img {
-    width: 900px;
-     display: grid;
- } */
-  .menu {
-        display: flex;
-        flex-direction: column;
-        gap: 50px;
-        margin: 50px 0px;
-        align-items: center;
+    width: 85%;
+    margin: 40px auto;
 
-  }
+    border: none;
+    border-top: 1px solid #ccc;
+}
 
-  .menu .tag {
-    align-self: center;
-    background-color: #149f39;
-  }
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-  .grid {
+    gap: 40px;
+
+    margin: 70px 0;
+}
+
+.menu .tag {
+    display: inline-block;
+
+    background-color: #356859;
+    color: white;
+
+    padding: 6px 14px;
+
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+
+.grid {
+    width: min(1200px, 92%);
+    margin: 0 auto;
+
     display: grid;
     gap: 10px;
-    grid-template-areas: 
-    "i1 i1 i2 i3"
-    "i1 i1 i2 i7"
-    "i4 i5 i6 i7";
+
+    grid-template-areas:
+        "i1 i1 i2 i3"
+        "i1 i1 i2 i7"
+        "i4 i5 i6 i7";
 }
+
+.grid img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 6px;
+
+    transition: transform 0.3s ease;
+}
+
+.grid img:hover {
+    transform: scale(1.02);
+}
+
+
 .item1 {
     grid-area: i1;
 }
+
 .item2 {
     grid-area: i2;
 }
+
 .item3 {
     grid-area: i3;
 }
+
 .item4 {
     grid-area: i4;
 }
+
 .item5 {
     grid-area: i5;
 }
+
 .item6 {
     grid-area: i6;
 }
+
 .item7 {
     grid-area: i7;
 }
- 
+
 
 .footer {
-    background-color: grey;
-    align-items: center;
+    background-color: #3B1712;
+    color: #F7EFE3;
+
     display: flex;
-    margin-top: 60px;
-    gap: 60px;
+    align-items: center;
+    justify-content: space-around;
+
+    gap: 40px;
+
+    padding: 50px 8%;
+    margin-top: 70px;
 }
+
 .end_logo {
-    width: 300px;
-    height: 100px;
-    margin: 60px 80px;
+    width: 250px;
+    height: auto;
 }
+
 h2 {
-    padding: 20px;
+    padding: 10px 0;
+}
+
+
+@media (max-width: 900px) {
+
+    .intro {
+        gap: 30px;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .image_content {
+        width: 48%;
+    }
+
+    .text_container {
+        width: 48%;
+    }
+
+    .services {
+        padding: 0 5%;
+    }
+
+    .voucher,
+    .food,
+    .delivery {
+        padding: 15px;
+        gap: 12px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    /* Header */
+
+    .top {
+        height: 80px;
+    }
+
+    .header {
+        width: 160px;
+        margin-left: 25px;
+    }
+
+
+    /* Intro */
+
+    .intro {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 110px 20px 40px;
+
+        gap: 30px;
+    }
+
+    .image_content {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .text_container {
+        width: 100%;
+        max-width: 550px;
+    }
+
+    h1 {
+        font-size: clamp(38px, 12vw, 55px);
+    }
+
+
+    .services {
+        flex-direction: column;
+
+        width: 90%;
+
+        padding: 0;
+        margin: 40px auto;
+    }
+
+    .voucher,
+    .food,
+    .delivery {
+        width: 100%;
+    }
+
+
+    /* Menu */
+
+    .menu {
+        margin: 50px 0;
+    }
+
+    .grid {
+        width: 90%;
+
+        grid-template-areas:
+            "i1 i1"
+            "i2 i3"
+            "i4 i5"
+            "i6 i7";
+    }
+
+
+    .footer {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 40px 20px;
+    }
+
+    .end_logo {
+        width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .top {
+        height: 70px;
+    }
+
+    .header {
+        width: 140px;
+        margin-left: 20px;
+    }
+
+    .intro {
+        padding-top: 100px;
+    }
+
+    h1 {
+        font-size: 38px;
+    }
+
+    button {
+        margin-top: 25px;
+    }
+
+    .grid {
+        gap: 6px;
+    }
 }
