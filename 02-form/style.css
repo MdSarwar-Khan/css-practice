@@ -4,35 +4,75 @@
     box-sizing: border-box;
 }
 
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-
-}
 
 body {
-    background-image: url("p2_img/img1.jpg");
-    min-height: 100%;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.25),
+            rgba(0, 0, 0, 0.25)
+        ),
+        url("p2_img/img1.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0 auto;
 }
 
 .apply-box {
-    max-width: 600px;
-    padding: 20px;
-    margin: 0;
-    margin-top: 50px;
-    background-color: rgb(155, 213, 244);
-    box-shadow: 4px 3px 5px rgba(1, 1, 1, 0.8);
+    width: 100%;
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    padding: 30px;
+
+    background: rgba(255, 255, 255, 0.94);
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+
+.apply-box h1 {
+    font-size: 38px;
+
+    color: #111827;
+
+    margin-bottom: 25px;
+
+    line-height: 1.2;
 }
 
 .small-title {
-    font-size: 20px;
+    font-size: 18px;
+
+    font-weight: 500;
+
+    color: #475569;
 }
 
-.form_container {
+
+.form-container {
     margin-top: 20px;
+
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 18px 20px;
 }
 
 .form-control {
@@ -40,60 +80,130 @@ body {
     flex-direction: column;
 }
 
+
 label {
     font-size: 15px;
-    margin-bottom: 5px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 6px;
 }
 
-input ,select ,textarea {
-    padding: 6px 10px;
-    border: 1px solid grey;
-    border-radius: 4px;
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 11px 12px;
+    font-size: 14px;
+    font-family: inherit;
+    color: #1e293b;
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.15);
 }
 
-input :focus{
-    outline-color: aqua;
-}
-
-.button-container {
-    display: flex;
-    justify-content: end;
-    margin-top: 20px;
-
-}
-
-button{
-    background-color: rgb(102, 188, 172);
-    border: transparent solid 2px;
-    padding: 5px 10px;
-    color: rgb(12, 2, 30);
-    border-radius: 8px;
-    border:solid;
-    transition: 0.3s ease-in;
-}
-
-buttom:hover {
-    background-color: rgb(218, 11, 11);
-    border: 2px solid brown;
-    color: black;
-    transition: 0.3s ease-in;
-    cursor: pointer;
-}
 
 .textarea-control {
-    grid-column: 1 / span 2;
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
 }
 
 .textarea-control textarea {
-    width: 100%;
+    min-height: 110px;
+    resize: vertical;
 }
 
-@media (max-width: 460px) {
-    .textarea-control {
-        grid-column: 1 / span 1;
-    }
-};
+input[type="file"] {
+    padding: 8px;
+    cursor: pointer;
+}
 
-#box {
-    background-color: black;
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 25px;
+}
+
+button {
+    padding: 10px 22px;
+    background-color: #2563eb;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    border: 2px solid #2563eb;
+    border-radius: 7px;
+    cursor: pointer;
+    transition:
+        background-color 0.3s ease,
+        transform 0.2s ease,
+        box-shadow 0.3s ease;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+    border-color: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow:
+        0 5px 15px rgba(37, 99, 235, 0.3);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 25px 15px;
+    }
+    .apply-box {
+        padding: 22px;
+    }
+    .apply-box h1 {
+        font-size: 28px;
+    }
+    .small-title {
+        font-size: 15px;
+    }
+    .form-container {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    .textarea-control {
+        grid-column: 1;
+    }
+    .button-container {
+        justify-content: stretch;
+    }
+    button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .apply-box {
+        padding: 18px;
+    }
+    .apply-box h1 {
+        font-size: 24px;
+    }
+    label {
+        font-size: 14px;
+    }
+    input,
+    select,
+    textarea {
+        font-size: 14px;
+    }
 }
