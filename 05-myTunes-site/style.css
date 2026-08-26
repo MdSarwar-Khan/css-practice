@@ -21,7 +21,7 @@ html,body {
 section {
     scroll-margin: 50px;
 }
-.conainer {
+.container {
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -193,5 +193,3 @@ button:hover {
     justify-content: center;
 
 }
-
-/* responsive test */
