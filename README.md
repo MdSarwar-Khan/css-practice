@@ -26,6 +26,12 @@ A restaurant-themed landing page designed to practice modern layouts and CSS sty
 
 A music-themed landing page inspired by a streaming platform, built to practice sections, navigation, layouts, and responsive design.
 
+### 06 — simple website Landing Page
+
+A simple static website built to practice HTML structure, CSS styling, sections, navigation, and basic page layout.
+Designed with a clean and responsive layout to strengthen frontend development fundamentals.
+
+
 ## Progress
 
 * [x] Parallax Website
@@ -33,6 +39,7 @@ A music-themed landing page inspired by a streaming platform, built to practice 
 * [x] Developer Landing Page
 * [x] Restaurant Landing Page
 * [x] myTunes Landing Page
+* [x] simple website Landing Page
 * [ ] Next Project
 * [ ] More projects coming soon
 
